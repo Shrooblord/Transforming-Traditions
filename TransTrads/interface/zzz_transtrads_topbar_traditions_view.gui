@@ -483,8 +483,8 @@ guiTypes = {
 
         containerWindowType = {
 			name = "tradition_global"
-			size = { width = 3500 height = 1440 }
-			position = { x = -50% y = -50% }
+			size = { width = 3500 height = 2000 }
+			position = { x = -60% y = -60% }
 			orientation = center
 			iconType = {
 				name = "hex_bg"
