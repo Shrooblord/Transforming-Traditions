@@ -1,0 +1,635 @@
+#Main Window Size (contains main window elements: close button, title, progress bar etc.)
+@main_window_size_w = 1880
+@main_window_size_h = 1000
+
+@hide_position_x = -1880
+
+#Ascension Perks bar
+@ap_entries_w = 216
+@ap_entries_h = 764
+@ap_entries_x = 20
+@ap_entries_y = 176
+
+#AP columns (X positions)
+@ap_entry_columnOdd_x1 = 0
+@ap_entry_columnOdd_x2 = 58
+@ap_entry_columnOdd_x3 = 116
+@ap_entry_columnEven_x1 = 29
+@ap_entry_columnEven_x2 = 87
+@ap_entry_columnEven_x3 = 145
+
+#AP columns (Y positions)
+@ap_entry_row1 = 40 #+26
+@ap_entry_row2 = 89
+@ap_entry_row3 = 138
+@ap_entry_row4 = 187
+@ap_entry_row5 = 236
+@ap_entry_row6 = 285
+@ap_entry_row7 = 334
+@ap_entry_row8 = 383
+@ap_entry_row9 = 432
+@ap_entry_row10 = 481
+@ap_entry_row11 = 530
+@ap_entry_row12 = 579
+@ap_entry_row13 = 628
+@ap_entry_row14 = 677
+
+#Tradition Icon Position
+@x_1 = 61
+@x_2 = 96
+@x_3 = 131
+@x_4 = 166
+@x_5 = 201
+@y_1 = 55
+@y_2 = 125
+
+#Arrow Positions
+@x_arrow_down_1 = 77
+@x_arrow_down_2 = 147
+@x_arrow_down_3 = 217
+@x_arrow_merge_1 = 82
+@x_arrow_merge_2 = 117
+@x_arrow_merge_3 = 152
+@x_arrow_split_1 = 76
+@x_arrow_split_2 = 111
+@x_arrow_split_3 = 146
+@x_arrow_merge_wide = 82
+
+@y_arrow_down = 100
+@y_arrow_side_lower = 70
+@y_arrow_side = 140
+@x_arrow_right_1 = 106
+@x_arrow_right_2 = 176
+@x_arrow_left_1 = 108
+@x_arrow_left_2 = 178
+
+@y_arrow_split_wide = 100
+@x_arrow_split_wide = 77
+
+guiTypes = {
+
+	################################################################
+	# TRADITION ENTRY POSITIONS
+	################################################################
+	
+	positionType = { name = "tr_diplomacy_the_federation"         		position = { x = 554 y = 48  } }
+	positionType = { name = "tr_diplomacy_open_markets"            	    position = { x = 589 y = 115 } }
+	positionType = { name = "tr_diplomacy_entente_coordination"         position = { x = 519 y = 115 } }
+	positionType = { name = "tr_diplomacy_insider_trading"      		position = { x = 554 y = 182 } }
+	positionType = { name = "tr_diplomacy_secure_shipping"     	 	  	position = { x = 624 y = 182 } }
+	
+	positionType = { name = "tr_est_friendship_1"					  	position = { x = 519 y = 252 } }
+	positionType = { name = "tr_est_friendship_2"		  				position = { x = 484 y = 319 } }
+	positionType = { name = "tr_est_friendship_3"			  			position = { x = 554 y = 319 } }
+	positionType = { name = "tr_est_friendship_4"		  				position = { x = 589 y = 386 } }
+	positionType = { name = "tr_est_friendship_5"			 			position = { x = 519 y = 386 } }
+	positionType = { name = "tr_plentiful_aspiration_1"			 		position = { x = 624 y = 316 } }
+	positionType = { name = "tr_plentiful_aspiration_2"			 		position = { x = 624 y = 249 } }
+	positionType = { name = "tr_plentiful_aspiration_3"			 		position = { x = 691 y = 249 } }
+	positionType = { name = "tr_plentiful_aspiration_4"			 		position = { x = 691 y = 316 } }
+	positionType = { name = "tr_plentiful_aspiration_5"			 		position = { x = 691 y = 182 } }
+	
+	positionType = { name = "tr_expansion_colonization_fever"     	 	position = { x = 839 y = 115 } }
+	positionType = { name = "tr_expansion_a_new_life"     	 			position = { x = 874 y = 182 } }
+	positionType = { name = "tr_expansion_courier_network"     	 		position = { x = 804 y = 182 } }
+	positionType = { name = "tr_expansion_reach_for_the_stars"     	 	position = { x = 804 y = 48  } }
+	positionType = { name = "tr_expansion_galactic_ambition"     	 	position = { x = 769 y = 115 } }
+	positionType = { name = "tr_est_administratum_1"					position = { x = 839 y = 249 } }
+	positionType = { name = "tr_est_administratum_2"		  			position = { x = 839 y = 316 } }
+	positionType = { name = "tr_est_administratum_3"			  		position = { x = 769 y = 316 } }
+	positionType = { name = "tr_est_administratum_4"		  			position = { x = 769 y = 249 } }
+	positionType = { name = "tr_est_administratum_5"		 			position = { x = 804 y = 383 } }
+	positionType = { name = "tr_est_foundation_1"				  		position = { x = 927 y = 221 } }
+	positionType = { name = "tr_est_foundation_2"	  					position = { x = 892 y = 287 } }
+	positionType = { name = "tr_est_foundation_3"		  				position = { x = 962 y = 287 } }
+	positionType = { name = "tr_est_foundation_4"	  					position = { x = 902 y = 354 } }
+	positionType = { name = "tr_est_foundation_5"		 				position = { x = 962 y = 354 } }
+	
+	positionType = { name = "tr_domination_grand_council"     	 		position = { x = 1104 y = 48  } }
+	positionType = { name = "tr_domination_judgment_corps"     	 		position = { x = 1069 y = 115 } }
+	positionType = { name = "tr_domination_workplace_motivators"   		position = { x = 1171 y = 48  } }
+	positionType = { name = "tr_domination_imperious_architecture"     	position = { x = 1139 y = 182 } }
+	positionType = { name = "tr_domination_colonial_viceroys"     	 	position = { x = 1139 y = 115 } }
+	positionType = { name = "tr_est_isolation_1"					  	position = { x = 1069 y = 182 } }
+	positionType = { name = "tr_est_isolation_2"		  				position = { x = 1069 y = 249 } }
+	positionType = { name = "tr_est_isolation_3"			  			position = { x = 1002 y = 182 } }
+	positionType = { name = "tr_est_isolation_4"		  				position = { x = 1002 y = 115 } }
+	positionType = { name = "tr_est_isolation_5"		 				position = { x = 1069 y = 316 } }
+	positionType = { name = "tr_est_chivalry_1"						  	position = { x = 1138 y = 249 } }
+	positionType = { name = "tr_est_chivalry_2"		  					position = { x = 1198 y = 249 } }
+	positionType = { name = "tr_est_chivalry_3"			  				position = { x = 1258 y = 249 } }
+	positionType = { name = "tr_est_chivalry_4"		  					position = { x = 1138 y = 383 } }
+	positionType = { name = "tr_est_chivalry_5"				 			position = { x = 1138 y = 316 } }
+	positionType = { name = "tr_plentiful_malice_1" 					position = { x = 1238 y = 48  } }
+	positionType = { name = "tr_plentiful_malice_2" 					position = { x = 1203 y = 115 } }
+	positionType = { name = "tr_plentiful_malice_3" 					position = { x = 1273 y = 115 } }
+	positionType = { name = "tr_plentiful_malice_4" 					position = { x = 1273 y = 182 } }
+	positionType = { name = "tr_plentiful_malice_5" 					position = { x = 1203 y = 182 } }
+	
+	positionType = { name = "tr_harmony_the_greater_good"     	 		position = { x = 1454 y = 48  } }
+	positionType = { name = "tr_harmony_kinship"     	 				position = { x = 1419 y = 115 } }
+	positionType = { name = "tr_harmony_utopian_dream"     	 			position = { x = 1489 y = 115 } }
+	positionType = { name = "tr_harmony_mind_and_body"     	 			position = { x = 1454 y = 182 } }
+	positionType = { name = "tr_harmony_bulwark_of_harmony"     	 	position = { x = 1524 y = 182 } }
+	positionType = { name = "tr_est_aesthetics_1"				  		position = { x = 1556 y = 115 } }
+	positionType = { name = "tr_est_aesthetics_2"		  				position = { x = 1609 y = 220 } }
+	positionType = { name = "tr_est_aesthetics_3"			  			position = { x = 1549 y = 287 } }
+	positionType = { name = "tr_est_aesthetics_4"		  				position = { x = 1609 y = 153 } }
+	positionType = { name = "tr_est_aesthetics_5"			 			position = { x = 1609 y = 287 } }
+	positionType = { name = "tr_est_justice_1"					  		position = { x = 1454 y = 520 } }
+	positionType = { name = "tr_est_justice_2"		  					position = { x = 1341 y = 558 } }
+	positionType = { name = "tr_est_justice_3"			  				position = { x = 1401 y = 558 } }
+	positionType = { name = "tr_est_justice_4"		  					position = { x = 1454 y = 587 } }
+	positionType = { name = "tr_est_justice_5"		 					position = { x = 1401 y = 491 } }
+	positionType = { name = "tr_est_liberty_1"				  			position = { x = 1567 y = 625 } }
+	positionType = { name = "tr_est_liberty_2"		  					position = { x = 1567 y = 491 } }
+	positionType = { name = "tr_est_liberty_3"			  				position = { x = 1567 y = 558 } }
+	positionType = { name = "tr_est_liberty_4"		  					position = { x = 1514 y = 520 } }
+	positionType = { name = "tr_est_liberty_5"			 				position = { x = 1514 y = 587 } }
+	positionType = { name = "tr_est_order_1"					  		position = { x = 1454 y = 319 } }
+	positionType = { name = "tr_est_order_2"		  					position = { x = 1507 y = 357 } }
+	positionType = { name = "tr_est_order_3"			  				position = { x = 1454 y = 386 } }
+	positionType = { name = "tr_est_order_4"		  					position = { x = 1454 y = 453 } }
+	positionType = { name = "tr_est_order_5"			 				position = { x = 1514 y = 453 } }
+	positionType = { name = "tr_plentiful_affinity_1"					position = { x = 1366 y = 220 } }
+	positionType = { name = "tr_plentiful_affinity_2"					position = { x = 1366 y = 153 } }
+	positionType = { name = "tr_plentiful_affinity_3"					position = { x = 1401 y = 287 } }
+	positionType = { name = "tr_plentiful_affinity_4"					position = { x = 1401 y = 354 } }
+	positionType = { name = "tr_plentiful_affinity_5"					position = { x = 1401 y = 421 } }
+	positionType = { name = "tr_plentiful_mysticism_1"					position = { x = 1211 y = 354 } }
+	positionType = { name = "tr_plentiful_mysticism_2"					position = { x = 1271 y = 354 } }
+	positionType = { name = "tr_plentiful_mysticism_3"					position = { x = 1331 y = 354 } }
+	positionType = { name = "tr_plentiful_mysticism_4"					position = { x = 1331 y = 287 } }
+	positionType = { name = "tr_plentiful_mysticism_5"					position = { x = 1271 y = 421 } }
+	
+	positionType = { name = "tr_discovery_to_boldly_go"     	 		position = { x = 1754 y = 48  } }
+	positionType = { name = "tr_discovery_databank_uplinks"     	 	position = { x = 1719 y = 115 } }
+	positionType = { name = "tr_discovery_polytechnic_education"     	position = { x = 1789 y = 182 } }
+	positionType = { name = "tr_discovery_faith_in_science"     	 	position = { x = 1789 y = 249 } }
+	positionType = { name = "tr_discovery_science_division"     	 	position = { x = 1789 y = 115 } }
+	positionType = { name = "tr_est_archivist_1"				  		position = { x = 1719 y = 182 } }
+	positionType = { name = "tr_est_archivist_2"	  					position = { x = 1719 y = 249 } }
+	positionType = { name = "tr_est_archivist_3"		  				position = { x = 1719 y = 316 } }
+	positionType = { name = "tr_est_archivist_4"	  					position = { x = 1719 y = 383 } }
+	positionType = { name = "tr_est_archivist_5"			 			position = { x = 1652 y = 383 } }
+	positionType = { name = "tr_est_academy_1"				  			position = { x = 1842 y = 287 } }
+	positionType = { name = "tr_est_academy_2"		  					position = { x = 1842 y = 354 } }
+	positionType = { name = "tr_est_academy_3"			  				position = { x = 1909 y = 354 } }
+	positionType = { name = "tr_est_academy_4"		  					position = { x = 1909 y = 287 } }
+	positionType = { name = "tr_est_academy_5"		 					position = { x = 1909 y = 421 } }
+	positionType = { name = "tr_plentiful_experimentalism_1"			position = { x = 1789 y = 392 } }
+	positionType = { name = "tr_plentiful_experimentalism_2"			position = { x = 1856 y = 459 } }
+	positionType = { name = "tr_plentiful_experimentalism_3"			position = { x = 1789 y = 459 } }
+	positionType = { name = "tr_plentiful_experimentalism_4"			position = { x = 1789 y = 526 } }
+	positionType = { name = "tr_plentiful_experimentalism_5" 			position = { x = 1719 y = 459 } }
+	
+	positionType = { name = "tr_supremacy_great_game"     	 			position = { x = 2221 y = 115 } }
+	positionType = { name = "tr_supremacy_fleet_logistical_corps"     	position = { x = 2154 y = 115 } }
+	positionType = { name = "tr_supremacy_master_shipwrights"     	 	position = { x = 2154 y = 48  } }
+	positionType = { name = "tr_supremacy_war_games"     	 			position = { x = 2189 y = 182 } }
+	positionType = { name = "tr_supremacy_overwhelming_force"     	 	position = { x = 2119 y = 182 } }
+	positionType = { name = "tr_est_militarism_1"					  	position = { x = 2052 y = 182 } }
+	positionType = { name = "tr_est_militarism_2"		  				position = { x = 2052 y = 115 } }
+	positionType = { name = "tr_est_militarism_3"			  			position = { x = 1982 y = 115 } }
+	positionType = { name = "tr_est_militarism_4"		  				position = { x = 1982 y = 182 } }
+	positionType = { name = "tr_est_militarism_5"			 			position = { x = 2017 y = 249 } }
+	positionType = { name = "tr_plentiful_assault_1"		  			position = { x = 1964 y = 287 } }
+	positionType = { name = "tr_plentiful_assault_2"		  			position = { x = 1964 y = 354 } }
+	positionType = { name = "tr_plentiful_assault_3"		  			position = { x = 2024 y = 421 } }
+	positionType = { name = "tr_plentiful_assault_4"		  			position = { x = 1964 y = 421 } }
+	positionType = { name = "tr_plentiful_assault_5"		  			position = { x = 1964 y = 488 } }
+	positionType = { name = "tr_plentiful_anguish_1"		  			position = { x = 2154 y = 249 } }
+	positionType = { name = "tr_plentiful_anguish_2"		  			position = { x = 2224 y = 249 } }
+	positionType = { name = "tr_plentiful_anguish_3"		  			position = { x = 2189 y = 316 } }
+	positionType = { name = "tr_plentiful_anguish_4"		  			position = { x = 2242 y = 354 } }
+	positionType = { name = "tr_plentiful_anguish_5"		  			position = { x = 2242 y = 421 } }
+	positionType = { name = "tr_plentiful_order_1"		  				position = { x = 2274 y = 153 } }
+	positionType = { name = "tr_plentiful_order_2"		  				position = { x = 2274 y = 220 } }
+	positionType = { name = "tr_plentiful_order_3"		  				position = { x = 2274 y = 286 } }
+	positionType = { name = "tr_plentiful_order_4"		  				position = { x = 2327 y = 190 } }
+	positionType = { name = "tr_plentiful_order_5"		  				position = { x = 2327 y = 257 } }
+	positionType = { name = "tr_plentiful_defence_1"		  			position = { x = 2070 y = 287 } }
+	positionType = { name = "tr_plentiful_defence_2"		  			position = { x = 2035 y = 354 } }
+	positionType = { name = "tr_plentiful_defence_3"		  			position = { x = 2105 y = 354 } }
+	positionType = { name = "tr_plentiful_defence_4"		  			position = { x = 2105 y = 421 } }
+	positionType = { name = "tr_plentiful_defence_5"		  			position = { x = 2165 y = 421 } }
+	positionType = { name = "tr_est_piracy_1"						  	position = { x = 2221 y = 48  } }
+	positionType = { name = "tr_est_piracy_2"		  					position = { x = 2288 y = 48  } }
+	positionType = { name = "tr_est_piracy_3"			  				position = { x = 2355 y = 48  } }
+	positionType = { name = "tr_est_piracy_4"		  					position = { x = 2355 y = 115 } }
+	positionType = { name = "tr_est_piracy_5"				 			position = { x = 2415 y = 115 } }
+	
+	positionType = { name = "tr_prosperity_sct"     	 				position = { x = 2504 y = 182 } }
+	positionType = { name = "tr_prosperity_administrative_operations"   position = { x = 2469 y = 249 } }
+	positionType = { name = "tr_prosperity_public_works"     	 		position = { x = 2539 y = 249 } }
+	positionType = { name = "tr_prosperity_interstellar_franchising"    position = { x = 2504 y = 48  } }
+	positionType = { name = "tr_prosperity_pursuit_of_profit"     	 	position = { x = 2504 y = 115 } }
+	positionType = { name = "tr_plentiful_kleptocracy_1"				position = { x = 2504 y = 316 } }
+	positionType = { name = "tr_plentiful_kleptocracy_2"				position = { x = 2504 y = 383 } }
+	positionType = { name = "tr_plentiful_kleptocracy_3"				position = { x = 2451 y = 421 } }
+	positionType = { name = "tr_plentiful_kleptocracy_4"				position = { x = 2504 y = 450 } }
+	positionType = { name = "tr_plentiful_kleptocracy_5"				position = { x = 2557 y = 421 } }
+	positionType = { name = "tr_est_greed_1"				  			position = { x = 2437 y = 182 } }
+	positionType = { name = "tr_est_greed_2"		  					position = { x = 2384 y = 220 } }
+	positionType = { name = "tr_est_greed_3"			  				position = { x = 2384 y = 287 } }
+	positionType = { name = "tr_est_greed_4"		  					position = { x = 2349 y = 354 } }
+	positionType = { name = "tr_est_greed_5"			 				position = { x = 2419 y = 354 } }
+	positionType = { name = "tr_est_commerce_1"					  		position = { x = 2571 y = 182 } }
+	positionType = { name = "tr_est_commerce_2"		  					position = { x = 2624 y = 220 } }
+	positionType = { name = "tr_est_commerce_3"			  				position = { x = 2624 y = 287 } }
+	positionType = { name = "tr_est_commerce_4"		  					position = { x = 2589 y = 354 } }
+	positionType = { name = "tr_est_commerce_5"		 					position = { x = 2659 y = 354 } }
+	
+	positionType = { name = "tr_est_spaceborn_1"					  	position = { x = 2834 y = 48  } }
+	positionType = { name = "tr_est_spaceborn_2"		  				position = { x = 2799 y = 115 } }
+	positionType = { name = "tr_est_spaceborn_3"		  				position = { x = 2799 y = 182 } }
+	positionType = { name = "tr_est_spaceborn_4"			  			position = { x = 2869 y = 115 } }
+	positionType = { name = "tr_est_spaceborn_5"			 			position = { x = 2869 y = 182 } }
+	positionType = { name = "tr_est_mechanicum_1"					  	position = { x = 2739 y = 249 } }
+	positionType = { name = "tr_est_mechanicum_2"		  				position = { x = 2739 y = 316 } }
+	positionType = { name = "tr_est_mechanicum_3"			  			position = { x = 2799 y = 249 } }
+	positionType = { name = "tr_est_mechanicum_4"		  				position = { x = 2799 y = 316 } }
+	positionType = { name = "tr_est_mechanicum_5"		 				position = { x = 2769 y = 383 } }
+	positionType = { name = "tr_plentiful_endure_1"		 				position = { x = 2869 y = 249 } }
+	positionType = { name = "tr_plentiful_endure_2"		 				position = { x = 2869 y = 316 } }
+	positionType = { name = "tr_plentiful_endure_3" 		 			position = { x = 2929 y = 249 } }
+	positionType = { name = "tr_plentiful_endure_4" 		 			position = { x = 2929 y = 316 } }
+	positionType = { name = "tr_plentiful_endure_5" 		 			position = { x = 2899 y = 383 } }
+	
+	positionType = { name = "tr_plentiful_industry_1" 					position = { x = 3076 y = 48 } }
+	positionType = { name = "tr_plentiful_industry_2" 					position = { x = 3076 y = 115 } }
+	positionType = { name = "tr_plentiful_industry_3" 					position = { x = 3143 y = 182 } }
+	positionType = { name = "tr_plentiful_industry_4" 					position = { x = 3009 y = 182 } }
+	positionType = { name = "tr_plentiful_industry_5" 					position = { x = 3076 y = 182 } }
+	positionType = { name = "tr_est_cybernetics_1"					  	position = { x = 3009 y = 249 } }
+	positionType = { name = "tr_est_cybernetics_2"		  				position = { x = 3009 y = 316 } }
+	positionType = { name = "tr_est_cybernetics_3"			  			position = { x = 3009 y = 383 } }
+	positionType = { name = "tr_est_cybernetics_4"		  				position = { x = 3076 y = 383 } }
+	positionType = { name = "tr_est_cybernetics_5"		 				position = { x = 3076 y = 450 } }
+	positionType = { name = "tr_est_industry_1"					  		position = { x = 3143 y = 249 } }
+	positionType = { name = "tr_est_industry_2"		  					position = { x = 3143 y = 316 } }
+	positionType = { name = "tr_est_industry_3"			  				position = { x = 3177 y = 383 } }
+	positionType = { name = "tr_est_industry_4"		  					position = { x = 3210 y = 249 } }
+	positionType = { name = "tr_est_industry_5"			 				position = { x = 3210 y = 316 } }
+	positionType = { name = "tr_est_mysticism_1"				  		position = { x = 3127 y = 517 } }
+	positionType = { name = "tr_est_mysticism_2"	  					position = { x = 3025 y = 584 } }
+	positionType = { name = "tr_est_mysticism_3"		  				position = { x = 3162 y = 584 } }
+	positionType = { name = "tr_est_mysticism_4"	  					position = { x = 3092 y = 584 } }
+	positionType = { name = "tr_est_mysticism_5"		 				position = { x = 3229 y = 584 } }
+
+	positionType = { name = "tr_est_natural_1"				  			position = { x = 3245 y = 115 } }
+	positionType = { name = "tr_est_natural_2"		  					position = { x = 3210 y = 182 } }
+	positionType = { name = "tr_est_natural_3"			  				position = { x = 3280 y = 182 } }
+	positionType = { name = "tr_est_natural_4"		  					position = { x = 3280 y = 48 } }
+	positionType = { name = "tr_est_natural_5"			 				position = { x = 3315 y = 115 } }
+	positionType = { name = "tr_plentiful_transformation_1"				position = { x = 3347 y = 182 } }
+	positionType = { name = "tr_plentiful_transformation_2"				position = { x = 3347 y = 249 } }
+	positionType = { name = "tr_plentiful_transformation_3"				position = { x = 3280 y = 249 } }
+	positionType = { name = "tr_plentiful_transformation_4"				position = { x = 3347 y = 316 } }
+	positionType = { name = "tr_plentiful_transformation_5" 			position = { x = 3414 y = 249 } }
+	
+	
+	################################################################
+	# ASCENSION PERKS ENTRY POSITIONS
+	################################################################
+
+	positionType = { name = "ap_0"	position = { x = @ap_entry_columnOdd_x1 y = @ap_entry_row1 } }
+    positionType = { name = "ap_1"	position = { x = @ap_entry_columnOdd_x2 y = @ap_entry_row1 } }
+    positionType = { name = "ap_2"	position = { x = @ap_entry_columnOdd_x3 y = @ap_entry_row1 } }
+	positionType = { name = "ap_3"	position = { x = @ap_entry_columnEven_x1 y = @ap_entry_row2 } }
+	positionType = { name = "ap_4"	position = { x = @ap_entry_columnEven_x2 y = @ap_entry_row2 } }
+    positionType = { name = "ap_5"	position = { x = @ap_entry_columnEven_x3 y = @ap_entry_row2 } }
+    positionType = { name = "ap_6"	position = { x = @ap_entry_columnOdd_x1 y = @ap_entry_row3 } }
+    positionType = { name = "ap_7"	position = { x = @ap_entry_columnOdd_x2 y = @ap_entry_row3 } }
+    positionType = { name = "ap_8"	position = { x = @ap_entry_columnOdd_x3 y = @ap_entry_row3 } }
+	positionType = { name = "ap_9"	position = { x = @ap_entry_columnEven_x1 y = @ap_entry_row4 } }
+	positionType = { name = "ap_10"	position = { x = @ap_entry_columnEven_x2 y = @ap_entry_row4 } }
+    positionType = { name = "ap_11"	position = { x = @ap_entry_columnEven_x3 y = @ap_entry_row4 } }
+    positionType = { name = "ap_12"	position = { x = @ap_entry_columnOdd_x1 y = @ap_entry_row5 } }
+    positionType = { name = "ap_13"	position = { x = @ap_entry_columnOdd_x2 y = @ap_entry_row5 } }
+    positionType = { name = "ap_14"	position = { x = @ap_entry_columnOdd_x3 y = @ap_entry_row5 } }
+	positionType = { name = "ap_15"	position = { x = @ap_entry_columnEven_x1 y = @ap_entry_row6 } }
+	positionType = { name = "ap_16"	position = { x = @ap_entry_columnEven_x2 y = @ap_entry_row6 } }
+    positionType = { name = "ap_17"	position = { x = @ap_entry_columnEven_x3 y = @ap_entry_row6 } }
+    positionType = { name = "ap_18"	position = { x = @ap_entry_columnOdd_x1 y = @ap_entry_row7 } }
+    positionType = { name = "ap_19"	position = { x = @ap_entry_columnOdd_x2 y = @ap_entry_row7 } }
+    positionType = { name = "ap_20"	position = { x = @ap_entry_columnOdd_x3 y = @ap_entry_row7 } }
+	positionType = { name = "ap_21"	position = { x = @ap_entry_columnEven_x1 y = @ap_entry_row8 } }
+	positionType = { name = "ap_22"	position = { x = @ap_entry_columnEven_x2 y = @ap_entry_row8 } }
+    positionType = { name = "ap_23"	position = { x = @ap_entry_columnEven_x3 y = @ap_entry_row8 } }
+    positionType = { name = "ap_24"	position = { x = @ap_entry_columnOdd_x1 y = @ap_entry_row9 } }
+    positionType = { name = "ap_25"	position = { x = @ap_entry_columnOdd_x2 y = @ap_entry_row9 } }
+    positionType = { name = "ap_26"	position = { x = @ap_entry_columnOdd_x3 y = @ap_entry_row9 } }
+	positionType = { name = "ap_27"	position = { x = @ap_entry_columnEven_x1 y = @ap_entry_row10 } }
+	positionType = { name = "ap_28"	position = { x = @ap_entry_columnEven_x2 y = @ap_entry_row10 } }
+    positionType = { name = "ap_29"	position = { x = @ap_entry_columnEven_x3 y = @ap_entry_row10 } }
+    positionType = { name = "ap_30"	position = { x = @ap_entry_columnOdd_x1 y = @ap_entry_row11 } }
+    positionType = { name = "ap_31"	position = { x = @ap_entry_columnOdd_x2 y = @ap_entry_row11 } }
+    positionType = { name = "ap_32"	position = { x = @ap_entry_columnOdd_x3 y = @ap_entry_row11 } }
+	positionType = { name = "ap_33"	position = { x = @ap_entry_columnEven_x1 y = @ap_entry_row12 } }
+	positionType = { name = "ap_34"	position = { x = @ap_entry_columnEven_x2 y = @ap_entry_row12 } }
+    positionType = { name = "ap_35"	position = { x = @ap_entry_columnEven_x3 y = @ap_entry_row12 } }
+    positionType = { name = "ap_36"	position = { x = @ap_entry_columnOdd_x1 y = @ap_entry_row13 } }
+    positionType = { name = "ap_37"	position = { x = @ap_entry_columnOdd_x2 y = @ap_entry_row13 } }
+    positionType = { name = "ap_38"	position = { x = @ap_entry_columnOdd_x3 y = @ap_entry_row13 } }
+	positionType = { name = "ap_39"	position = { x = @ap_entry_columnEven_x1 y = @ap_entry_row14 } }
+	positionType = { name = "ap_40"	position = { x = @ap_entry_columnEven_x2 y = @ap_entry_row14 } }
+	positionType = { name = "ap_41"	position = { x = @ap_entry_columnEven_x3 y = @ap_entry_row14 } }
+	
+	
+	containerWindowType = {
+		name = "traditions_ascension_perk_entry"
+		size = { width = 44 height = 44 }
+
+		iconType = {
+			name = "icon"
+			position = { x = 9 y = 5 }
+			quadTextureSprite = "GFX_ascension_perk_slot_locked"
+			alwaystransparent = yes
+			scale = 1.0
+		}
+
+		buttonType = {
+			name = "ascension_perk_button"
+			spriteType = "GFX_flag_64_frame"
+			buttonFont = "cg_16b"
+			clicksound = click
+			oversound = no_sound
+		}
+	
+	}
+
+	################################################################
+	# TRADITION ENTRY
+	################################################################
+
+	containerWindowType = {
+		name = "tradition_entry"
+		size = { width = 44 height = 44 }
+		
+		buttonType = {
+			name = "adopt_button"
+			spriteType = "GFX_event_button_452"
+			buttonFont = "cg_16b"
+			clicksound = click
+		}
+		
+		#Need to hook this in
+		#Orange frame to show available traditions
+		iconType = {
+			name = "available_tradition"
+			spriteType = "GFX_tradition_available_button"
+			alwaysTransparent = yes
+			position = { x = -22 y = -22}
+		}
+	}
+
+	################################################################
+	# TRADITION VIEW
+	################################################################
+
+	containerWindowType = {
+		name = "traditions_topbar_view"
+        #size = { width = 1283 height = 1450 }
+        size = { width = @main_window_size_w height = @main_window_size_h }		
+		position = { x = -1270 y = 40 }
+		show_position = { x = 35 y = 40 }
+		hide_position = { x = @hide_position_x y = 40 }
+		animation_time = 200
+        animation_type = decelerated
+
+		orientation = upper_left
+		moveable = no
+		clipping = no
+		show_sound = "interface"
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tile_outliner_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -23 y = -18 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "header_line"
+			spriteType = "GFX_line"
+			position = { x = 6 y = 21 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "header"
+			font = "malgun_goth_24"
+			text = "TRADITIONS"
+			position = { x = 65 y = 5 }
+			maxWidth = 300
+			maxHeight = 20
+			fixedSize = yes
+			format = left
+		}
+
+		buttonType = {
+			name = "close"
+			spriteType = "GFX_close"
+			position = { x = -45 y = 16 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+		}
+		
+		containerWindowType = {
+			name = "tradition_box"
+			size = { width = @ap_entries_w height = 300 }     #w 600 h 100
+			position = { x = @ap_entries_x y = 80 }           #x 370 y 20
+
+			instantTextBoxType = {
+				name = "tradition_cost"
+				font = "malgun_goth_24"
+				position = { x = -8 y = -23 } #x 0 y -3
+				maxWidth = 140
+				maxHeight = 20
+				fixedSize = yes
+				format = right
+			}
+
+			iconType = {
+				name = "progress"
+				spriteType = "GFX_tech_research_progressbar"
+                position = { x = -8 y = 0 }  	# x 150 y -10
+                size = { width = @ap_entries_w height = 20 }
+			}
+
+			instantTextBoxType = {
+				name = "time_to_next_tradition"
+				font = "malgun_goth_24"
+				text = "11 months"
+				position = { x = 72 y = 34 }   #x 390 y -3
+				maxWidth = 300
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+			}
+        }
+
+        ################################################################
+        # TRADITIONS TECH WEB
+        ################################################################
+
+        containerWindowType = {
+			name = "tradition_global"
+			size = { width = 3500 height = 1440 }
+			position = { x = -50% y = -50% }
+			orientation = center
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_tradition_hex_bg_green"
+				position = { x = -150 y = -18 }
+				alwaysTransparent = yes
+				scale = 0
+			}
+            @startx = 497
+			@starty = 45
+			instantTextBoxType = {
+				name = "category_label"
+				font = "malgun_goth_24"
+				position = { x = 555555 y = 5555555 }
+				text = "tradition_expansion"
+			}
+			instantTextBoxType = {
+				name = "category_desc"
+				font = "cg_16b"
+				position = { x = 555555 y = 555555 }
+				maxWidth = 280
+				format = center
+				vertical_alignment = center
+				alwaystransparent = yes
+				text = "tradition_domination_desc"
+			}
+			#Arrows
+			containerWindowType = {
+				name = "tree"
+				##Diplomacy Arrows
+				iconType = {
+					name = "ar1" #Diplomacy Arrow 1
+					spriteType = "GFX_arrow_double"
+					position = { x = 535 y = 93 }
+					scale = 1.0
+                }
+                iconType = {
+					name = "ar2" #Diplomacy Arrow 2
+					spriteType = "GFX_arrow_double"
+					position = { x = 570 y = 160 }
+					scale = 1.0
+				}
+				iconType = {
+					name = "ar19" #Diplomacy Arrow 3
+					spriteType = "GFX_arrow_long"
+					position = { x = 535 y = 160 }
+					scale = 1.0
+				}
+				iconType = {
+					name = "ar20" #Diplomacy Arrow 4
+					spriteType = "GFX_arrow_double"
+					position = { x = 500 y = 297 }
+					scale = 1.0
+				}
+            }
+
+            containerWindowType = {
+				name = "adopted_count"
+				size = { width = 59 height = 68 }
+				position = { x = 647 y = 48 }
+
+				background = {
+					name = "adopted_hitbox"
+					spriteType = "GFX_leader_skill"
+				}
+
+				iconType = {
+					name = "adopted"
+					spriteType = "GFX_leader_skill"
+					alwaysTransparent = yes
+				}
+			
+				instantTextBoxType = {
+					name = "value"
+					font = "cg_16b"
+					position = { x = -55555 y = -55555 }
+					maxWidth = 100
+					maxHeight = 20
+					fixedSize = yes
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+
+			buttonType = {
+				name = "adopt_button"
+				size = { x = 59 y = 68 }
+				position = { x = 647 y = 48 }
+				spriteType = "GFX_leader_skill"
+				buttonFont = "cg_16b"
+				font = "cg_16b"
+				oversound = mouse_over
+			}
+        }
+
+        ################################################################
+        # TRADITION ASCENSION PERKS
+        ################################################################
+
+        containerWindowType = {
+            name = "ascension_perks"
+            size = { width = @ap_entries_w height = @ap_entries_h }
+            position = { x = @ap_entries_x y = @ap_entries_y }
+            
+            background = {
+                name = "black"
+                spriteType = "GFX_plain_bg_tile"
+                alwaysTransparent = yes
+            }
+            
+            iconType = {
+                name = "hex_bg"
+                spriteType = "GFX_hex_bg"
+                position = { x = -15 y = -15 }
+                alwaysTransparent = yes
+            }
+            
+			instantTextBoxType = {
+				name = "ascension_perks_label"
+				font = "malgun_goth_24"
+				position = { x = 18 y = 4 }
+				text = "ASCENSION_PERKS"
+			}
+            
+            containerWindowType = {
+                name = "tradition_box"
+                size = { width = 300 height = 200 }
+                position = { x = 15 y = 70 }
+            }
+        }
+        
+        ################################################################
+        # EXTRA
+        ################################################################
+        
+        containerWindowType = {
+            name = "NotVisible"
+            size = { width = 1705 height = 80 } #width = 1272
+            position = { x = 11 y = 2200 }
+            
+            containerWindowType = {
+                name = "tradition_box"
+                size = { width = 300 height = 200 }
+                position = { x = 15 y = 70 }
+            }
+        }
+	}
+}
